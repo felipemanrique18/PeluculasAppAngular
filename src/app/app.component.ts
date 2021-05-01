@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PeliculasService } from './services/peliculas.service';
+import { StarRatingComponent } from 'ng-starrating';
 
 @Component({
   selector: 'app-root',

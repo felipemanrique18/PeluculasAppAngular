@@ -1,0 +1,16 @@
+<div class="d-flex align-items-center text-white" *ngIf="cargando">
+    <strong>Loading...</strong>
+    <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+</div>
+<div class="animate__animated animate__fadeI" *ngIf="!cargando">
+    <h1>Cartelera</h1>
+    <div class="row" *ngIf="movies.length>0">
+        <app-slider [movies]="moviesSlideShow"></app-slider>
+    </div>
+    <h1 class="mt-4">Peliculas</h1>
+    <div class="row" *ngIf="movies.length>0 && !cargando">
+        <app-peliculas-poster-grid [movies]="movies"></app-peliculas-poster-grid>
+    </div>
+
+
+</div>

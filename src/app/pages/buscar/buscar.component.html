@@ -1,0 +1,9 @@
+<h1>Buscar pelicula: {{pelicula}}</h1>
+<hr>
+<div class="d-flex align-items-center text-white" *ngIf="cargando">
+    <strong>Loading...</strong>
+    <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+</div>
+<div class="row" *ngIf="movies.length>0 && !cargando">
+    <app-peliculas-poster-grid [movies]="movies"></app-peliculas-poster-grid>
+</div>
